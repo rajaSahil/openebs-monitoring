@@ -5,6 +5,7 @@ metadata:
   labels:
     name: jiva
   name: jiva
+  namespace: openebs-monitoring
 spec:
   groups:
   - name: openebs-Jiva-volume

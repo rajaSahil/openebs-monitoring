@@ -2,6 +2,7 @@ local dashboard = import './addons/dashboard-cm.libsonnet';
 local podMonitors = import './addons/podMonitors.libsonnet';
 local rules = import './addons/prometheusRules.libsonnet';
 local serviceMonitor = import './addons/serviceMonitors.libsonnet';
+local config= import '../config.libsonnet';
 
 local kp =
   (import 'kube-prometheus/main.libsonnet') +
@@ -15,7 +16,7 @@ local kp =
   {
     values+:: {
       common+: {
-        namespace: 'openebs',
+        namespace: config._config.openebsMonitoring.namespace,
       },
     },
   };

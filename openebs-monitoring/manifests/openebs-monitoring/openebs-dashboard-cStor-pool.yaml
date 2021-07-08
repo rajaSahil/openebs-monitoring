@@ -891,3 +891,4 @@ metadata:
   labels:
     name: grafana-dashboard-cstor-pool
   name: grafana-dashboard-cstor-pool
+  namespace: openebs-monitoring

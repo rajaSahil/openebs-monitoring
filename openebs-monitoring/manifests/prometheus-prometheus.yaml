@@ -8,13 +8,13 @@ metadata:
     app.kubernetes.io/version: 2.26.0
     prometheus: k8s
   name: k8s
-  namespace: openebs
+  namespace: openebs-monitoring
 spec:
   alerting:
     alertmanagers:
     - apiVersion: v2
       name: alertmanager-main
-      namespace: openebs
+      namespace: openebs-monitoring
       port: web
   externalLabels: {}
   image: quay.io/prometheus/prometheus:v2.26.0

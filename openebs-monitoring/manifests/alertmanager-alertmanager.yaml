@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/part-of: kube-prometheus
     app.kubernetes.io/version: 0.21.0
   name: main
-  namespace: openebs
+  namespace: openebs-monitoring
 spec:
   image: quay.io/prometheus/alertmanager:v0.21.0
   nodeSelector:

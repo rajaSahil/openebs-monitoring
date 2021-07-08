@@ -1487,3 +1487,4 @@ metadata:
   labels:
     name: grafana-dashboard-cstor-volume
   name: grafana-dashboard-cstor-volume
+  namespace: openebs-monitoring

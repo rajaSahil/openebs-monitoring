@@ -5,6 +5,7 @@ metadata:
   labels:
     name: localpv
   name: localpv
+  namespace: openebs-monitoring
 spec:
   endpoints:
   - path: /metrics

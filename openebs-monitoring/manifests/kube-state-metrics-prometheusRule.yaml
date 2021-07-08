@@ -9,7 +9,7 @@ metadata:
     prometheus: k8s
     role: alert-rules
   name: kube-state-metrics-rules
-  namespace: openebs
+  namespace: openebs-monitoring
 spec:
   groups:
   - name: kube-state-metrics

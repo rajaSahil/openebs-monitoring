@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/part-of: kube-prometheus
     app.kubernetes.io/version: 7.5.4
   name: grafana
-  namespace: openebs
+  namespace: openebs-monitoring
 spec:
   replicas: 1
   selector:
@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       annotations:
-        checksum/grafana-datasources: daff92c9b165745e988d8b1e096e066f
+        checksum/grafana-datasources: 6be50023e6fb3d556d158420845eb24b
       labels:
         app.kubernetes.io/component: grafana
         app.kubernetes.io/name: grafana

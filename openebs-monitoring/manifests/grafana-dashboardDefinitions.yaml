@@ -1735,7 +1735,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-apiserver
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     cluster-total.json: |-
@@ -3606,7 +3606,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-cluster-total
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     controller-manager.json: |-
@@ -4772,7 +4772,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-controller-manager
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     k8s-resources-cluster.json: |-
@@ -7785,7 +7785,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-k8s-resources-cluster
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     k8s-resources-namespace.json: |-
@@ -10518,7 +10518,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-k8s-resources-namespace
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     k8s-resources-node.json: |-
@@ -11485,7 +11485,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-k8s-resources-node
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     k8s-resources-pod.json: |-
@@ -13901,7 +13901,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-k8s-resources-pod
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     k8s-resources-workload.json: |-
@@ -15876,7 +15876,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-k8s-resources-workload
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     k8s-resources-workloads-namespace.json: |-
@@ -18016,7 +18016,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-k8s-resources-workloads-namespace
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     kubelet.json: |-
@@ -20538,7 +20538,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-kubelet
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     namespace-by-pod.json: |-
@@ -21991,7 +21991,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-namespace-by-pod
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     namespace-by-workload.json: |-
@@ -23716,7 +23716,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-namespace-by-workload
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     node-cluster-rsrc-use.json: |-
@@ -24669,7 +24669,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-node-cluster-rsrc-use
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     node-rsrc-use.json: |-
@@ -25649,7 +25649,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-node-rsrc-use
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     nodes.json: |-
@@ -26635,7 +26635,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-nodes
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     persistentvolumesusage.json: |-
@@ -27201,7 +27201,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-persistentvolumesusage
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     pod-total.json: |-
@@ -28418,7 +28418,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-pod-total
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     prometheus-remote-write.json: |-
@@ -30077,7 +30077,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-prometheus-remote-write
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     prometheus.json: |-
@@ -31293,7 +31293,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-prometheus
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     proxy.json: |-
@@ -32539,7 +32539,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-proxy
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     scheduler.json: |-
@@ -33628,7 +33628,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-scheduler
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     statefulset.json: |-
@@ -34545,7 +34545,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-statefulset
-    namespace: openebs
+    namespace: openebs-monitoring
 - apiVersion: v1
   data:
     workload-total.json: |-
@@ -35972,5 +35972,5 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 7.5.4
     name: grafana-dashboard-workload-total
-    namespace: openebs
+    namespace: openebs-monitoring
 kind: ConfigMapList

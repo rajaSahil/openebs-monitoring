@@ -949,3 +949,4 @@ metadata:
   labels:
     name: grafana-dashboard-cstor-overview
   name: grafana-dashboard-cstor-overview
+  namespace: openebs-monitoring

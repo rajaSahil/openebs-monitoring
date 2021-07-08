@@ -1459,3 +1459,4 @@ metadata:
   labels:
     name: grafana-dashboard-jiva-volume
   name: grafana-dashboard-jiva-volume
+  namespace: openebs-monitoring

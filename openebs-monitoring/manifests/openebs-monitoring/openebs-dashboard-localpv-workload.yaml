@@ -4875,3 +4875,4 @@ metadata:
   labels:
     name: grafana-dashboard-localpv-workload
   name: grafana-dashboard-localpv-workload
+  namespace: openebs-monitoring
