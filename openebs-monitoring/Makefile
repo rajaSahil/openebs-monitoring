@@ -32,10 +32,6 @@ vendor: $(JB_BIN) jsonnetfile.json jsonnetfile.lock.json
 	rm -rf vendor
 	$(JB_BIN) install	
 
-.PHONY: validate
-validate: crdschemas manifests $(KUBECONFORM_BIN)
-	$(KUBECONFORM_BIN) -kubernetes-version $(KUBE_VERSION) -schema-location 'default' -schema-location 'crdschemas/{{ .ResourceKind }}.json' -skip CustomResourceDefinition manifests/
-
 .PHONY: fmt
 fmt: $(JSONNETFMT_BIN)
 	find . -name 'vendor' -prune -o -name '*.libsonnet' -print -o -name '*.jsonnet' -print | \
