@@ -1,0 +1,38 @@
+name: ci
+on:
+  push:
+    paths:
+      - "openebs-monitoring/**"
+  pull_request:
+    paths:
+      - "openebs-monitoring/**"
+env:
+  golang-version: "1.15"
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Jsonnet linter
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - run: make --always-make lint
+  fmt:
+    runs-on: ubuntu-latest
+    name: Jsonnet formatter
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - run: make --always-make fmt && git diff --exit-code
+  generate:
+    runs-on: ubuntu-latest
+    name: Generate openebs-monitoring-stack
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ${{ env.golang-version }}
+      - run: make --always-make generate validate && git diff --exit-code
