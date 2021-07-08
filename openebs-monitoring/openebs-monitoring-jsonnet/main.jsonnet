@@ -1,7 +1,7 @@
-local serviceMonitor = import './addons/serviceMonitors.libsonnet';
-local podMonitors=import './addons/podMonitors.libsonnet';
 local dashboard = import './addons/dashboard-cm.libsonnet';
+local podMonitors = import './addons/podMonitors.libsonnet';
 local rules = import './addons/prometheusRules.libsonnet';
+local serviceMonitor = import './addons/serviceMonitors.libsonnet';
 
 local kp =
   (import 'kube-prometheus/main.libsonnet') +
@@ -36,7 +36,7 @@ local kp =
 { ['prometheus-' + name]: kp.prometheus[name] for name in std.objectFields(kp.prometheus) } +
 
 
-{ ['openebs-monitoring/openebs-servicemonitor-' +casType] : serviceMonitor.serviceMonitors[casType] for casType in std.objectFields(serviceMonitor.serviceMonitors) }+
-{ ['openebs-monitoring/openebs-podmonitor-' +casType] : podMonitors.podMonitors[casType] for casType in std.objectFields(podMonitors.podMonitors) }+
-{ ['openebs-monitoring/openebs-dashboard-'+std.strReplace(casType, '.json', '')] : dashboard.grafanaDashboards[casType] for casType in std.objectFields(dashboard.grafanaDashboards) }+
-{ ['openebs-monitoring/openebs-rule-'+name] : rules.prometheusRules[name], for name in std.objectFields(rules.prometheusRules) }
+{ ['openebs-monitoring/openebs-servicemonitor-' + casType]: serviceMonitor.serviceMonitors[casType] for casType in std.objectFields(serviceMonitor.serviceMonitors) } +
+{ ['openebs-monitoring/openebs-podmonitor-' + casType]: podMonitors.podMonitors[casType] for casType in std.objectFields(podMonitors.podMonitors) } +
+{ ['openebs-monitoring/openebs-dashboard-' + std.strReplace(casType, '.json', '')]: dashboard.grafanaDashboards[casType] for casType in std.objectFields(dashboard.grafanaDashboards) } +
+{ ['openebs-monitoring/openebs-rule-' + name]: rules.prometheusRules[name] for name in std.objectFields(rules.prometheusRules) }
