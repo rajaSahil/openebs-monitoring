@@ -9,7 +9,7 @@ local config = import '../../config.libsonnet';
       name: name,
       labels: { name: name },
       annotations: {},
-      namespace:config._config.openebsMonitoring.namespace,
+      namespace: config._config.openebsMonitoring.namespace,
     },
   },
   ServiceMonitor(name, casType): $._Object('monitoring.coreos.com/v1', 'ServiceMonitor', name) {
@@ -27,13 +27,12 @@ local config = import '../../config.libsonnet';
     },
   },
   PodMonitor(name, casType): $._Object('monitoring.coreos.com/v1', 'PodMonitor', name) {
-    local pm = self,
     spec: {
       podMetricsEndpoints: [
-         config._config.casType[casType].podMonitor.podMetricsEndpoints,
+        config._config.casType[casType].podMonitor.podMetricsEndpoints,
       ],
-      namespaceSelector:  config._config.casType[casType].podMonitor.namespaceSelector,
-      selector:  config._config.casType[casType].podMonitor.selector,
+      namespaceSelector: config._config.casType[casType].podMonitor.namespaceSelector,
+      selector: config._config.casType[casType].podMonitor.selector,
     },
   },
   ConfigMap(name): $._Object('v1', 'ConfigMap', name) {

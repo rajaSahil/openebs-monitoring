@@ -1,8 +1,8 @@
+local config = import '../config.libsonnet';
 local dashboard = import './addons/dashboard-cm.libsonnet';
 local podMonitors = import './addons/podMonitors.libsonnet';
 local rules = import './addons/prometheusRules.libsonnet';
 local serviceMonitor = import './addons/serviceMonitors.libsonnet';
-local config= import '../config.libsonnet';
 
 local kp =
   (import 'kube-prometheus/main.libsonnet') +
