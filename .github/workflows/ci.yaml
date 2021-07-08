@@ -13,32 +13,35 @@ jobs:
     runs-on: ubuntu-latest
     name: Jsonnet linter
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          persist-credentials: false
-      - run: |
-          cd openebs-monitoring
-          make --always-make lint
+          fetch-depth: 0
+      - name: lint
+        run: |
+          cd openebs-monitoring && make --always-make lint
   fmt:
     runs-on: ubuntu-latest
     name: Jsonnet formatter
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          persist-credentials: false
+          fetch-depth: 0
       - run: |
-          cd openebs-monitoring
-          make --always-make fmt && git diff --exit-code
+          cd openebs-monitoring && make --always-make fmt && git diff --exit-code
   generate:
     runs-on: ubuntu-latest
     name: Generate openebs-monitoring-stack
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          persist-credentials: false
-      - uses: actions/setup-go@v2
+          fetch-depth: 0
+      - name: Setup-go
+        uses: actions/setup-go@v2
         with:
           go-version: ${{ env.golang-version }}
-      - run: |
-          cd openebs-monitoring
-          make --always-make generate && git diff --exit-code
+      - name: Generate yamls
+        run: |
+          cd openebs-monitoring && make --always-make generate && git diff --exit-code
