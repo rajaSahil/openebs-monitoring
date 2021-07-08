@@ -41,4 +41,4 @@ jobs:
           go-version: ${{ env.golang-version }}
       - run: |
           cd openebs-monitoring
-          make --always-make generate validate && git diff --exit-code
+          make --always-make generate && git diff --exit-code
